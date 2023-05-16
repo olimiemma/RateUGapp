@@ -24,5 +24,5 @@ Rate Ug! is a frontend-only application, so there is no need to install any depe
 <b> Contributions </b>
 Contributions to Rate Ug! are welcome and encouraged. If you would like to contribute, please submit a pull request with your changes.
 
-<b>License</>
+<b>License</b>
 Rate Ug! is licensed under the MIT license. See the LICENSE file for more information.
