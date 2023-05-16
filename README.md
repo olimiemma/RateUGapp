@@ -5,7 +5,8 @@ RATE UG APP
 Rate Ug!
 Rate Ug! is a simple web application that allows users to rate anything on a scale of 1-10 and share their thoughts with the world. This application is built with HTML, CSS, and Bootstrap on the frontend, and JavaScript on the backend.
 
-Usage
+<b> Usage</b>
+
 To use Rate Ug!, simply navigate to the homepage and fill out the rating form. Enter a rating between 1 and 10, add an optional photo, and share your thoughts in the text field. Once you have filled out the form, click the "Post" button to submit your rating.
 
 Features
