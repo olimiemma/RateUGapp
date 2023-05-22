@@ -1,0 +1,24 @@
+def add_picture(connection, cursor):
+
+    # Get the image file from the user
+    image_file = request.files["image"]
+
+    # Save the image file to the server
+    with open("images/" + image_file.filename, "wb") as f:
+        f.write(image_file.file.read())
+
+    # Get the title and description of the picture from the user
+    title = request.form["title"]
+    description = request.form["description"]
+
+    # Insert the picture into the database
+    cursor.execute("""
+        INSERT INTO pictures (title, image_url, description)
+        VALUES (%s, %s, %s)
+    """, (title, "images/" + image_file.filename, description))
+
+    # Commit the changes to the database
+    connection.commit()
+
+# Add the event listener to the button
+add_picture_button.addEventListener("click", add_picture)
