@@ -1,0 +1,26 @@
+def search_pictures(connection, cursor, search_term):
+
+    # Query the database for pictures that match the search term
+    cursor.execute("SELECT * FROM pictures WHERE title LIKE %s", (search_term + "%",))
+
+    # Get the results of the query
+    results = cursor.fetchall()
+
+    # Create the HTML code to display the results
+    html_code = """
+    <ul>
+    {% for picture in results %}
+        <li>
+            <img src="{{ picture.image_url }}" alt="{{ picture.title }}">
+            <h2>{{ picture.title }}</h2>
+            <p>{{ picture.description }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+    """
+
+    # Write the HTML code to the response
+    response.write(html_code)
+
+# Add the event listener to the search bar
+search_bar.addEventListener("input", search_pictures)
