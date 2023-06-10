@@ -24,7 +24,7 @@ def get_ratings(country):
     raise Exception("Error getting ratings: {}".format(response.status_code))
 
 def main():
-  """The main function."""
+  """The main function"""
 
   country = input("Enter the name of the country: ")
   ratings = get_ratings(country)
